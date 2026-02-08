@@ -253,6 +253,7 @@ nav {
     display: block;
     opacity: 0;
     transition: opacity 0.3s ease;
+    border-radius: 12px;
 }
 
 .game-icon.loaded {
@@ -373,12 +374,9 @@ nav {
     /* Remove bottom margin as it's flex-row now */
 }
 
-.game-icon {
-    width: 60px;
-    /* Slightly smaller for row layout */
-    height: 60px;
-    border-radius: 12px;
-    object-fit: cover;
+/* Game Icon filled status via script */
+.game-icon.loaded {
+    opacity: 1;
 }
 
 
