@@ -216,34 +216,30 @@ nav {
 /* Game Cards Enhancements */
 .icon-wrapper {
     position: relative;
+    width: 64px;
+    height: 64px;
     flex-shrink: 0;
-    width: 80px;
-    height: 80px;
-    background: #f1f5f9;
     border-radius: 12px;
     overflow: hidden;
-    aspect-ratio: 1/1;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.icon-wrapper.loading::after {
-    content: "";
+.serial-no {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(100%);
-    }
+    background: #ff4757;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    z-index: 10;
 }
 
 .game-icon {
@@ -251,31 +247,6 @@ nav {
     height: 100%;
     object-fit: cover;
     display: block;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 12px;
-}
-
-.game-icon.loaded {
-    opacity: 1;
-}
-
-.serial-no {
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    background: #ff4757;
-    color: white;
-    width: 22px;
-    height: 22px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 800;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 2;
 }
 
 .game-card .game-details {
@@ -374,10 +345,7 @@ nav {
     /* Remove bottom margin as it's flex-row now */
 }
 
-/* Game Icon filled status via script */
-.game-icon.loaded {
-    opacity: 1;
-}
+
 
 
 .game-details h3 {
@@ -631,7 +599,7 @@ footer {
         padding: 15px;
     }
 
-    .game-icon {
+    .icon-wrapper {
         width: 50px;
         height: 50px;
     }
