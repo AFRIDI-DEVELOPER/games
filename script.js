@@ -509,46 +509,59 @@ const gamesData = [
 document.addEventListener('DOMContentLoaded', () => {
     const gameContainer = document.getElementById('game-container');
 
-    // Function to render game cards
+    // Function to render game cards in batches
     const renderGames = (games) => {
         gameContainer.innerHTML = '';
-        games.forEach((game, index) => {
-            const card = document.createElement('div');
-            card.className = 'game-card glass';
-            card.innerHTML = `
-                <div class="game-info">
-                    <div class="icon-wrapper">
-                        <div class="serial-no">${index + 1}</div>
-                        <img src="${game.iconUrl}" alt="${game.name}" class="game-icon" loading="lazy">
+
+        // Initial batch size for immediate view
+        const initialBatch = 10;
+
+        const renderBatch = (startIndex, count) => {
+            const endIndex = Math.min(startIndex + count, games.length);
+            for (let i = startIndex; i < endIndex; i++) {
+                const game = games[i];
+                const card = document.createElement('div');
+                card.className = 'game-card glass';
+
+                // Use fetchpriority="high" for top games to speed up mobile loading
+                const priority = i < 5 ? 'fetchpriority="high"' : '';
+
+                card.innerHTML = `
+                    <div class="game-info">
+                        <div class="icon-wrapper loading">
+                            <div class="serial-no">${i + 1}</div>
+                            <img src="${game.iconUrl}" alt="${game.name}" class="game-icon" loading="lazy" ${priority} onload="this.classList.add('loaded'); this.parentElement.classList.remove('loading')">
+                        </div>
+                        <div class="game-details">
+                            <h3>${game.name}</h3>
+                            <p class="bonus-tag">
+                                <svg class="tag-icon bonus-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.65-.5-.65C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76V8h2v.76L15.38 12 17 10.83 14.92 8H20v6z"/>
+                                </svg>
+                                Sign Up Bonus: <span>₹${game.signUpBonus}</span>
+                            </p>
+                            <p class="withdraw-tag">
+                                <svg class="tag-icon withdraw-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                                </svg>
+                                Min. Withdrawal: <span>₹${game.minWithdrawal}</span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="game-details">
-                        <h3>${game.name}</h3>
-                        <p class="bonus-tag">
-                            <svg class="tag-icon bonus-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.65-.5-.65C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76V8h2v.76L15.38 12 17 10.83 14.92 8H20v6z"/>
-                            </svg>
-                            Sign Up Bonus: <span>₹${game.signUpBonus}</span>
-                        </p>
-                        <p class="withdraw-tag">
-                            <svg class="tag-icon withdraw-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                            </svg>
-                            Min. Withdrawal: <span>₹${game.minWithdrawal}</span>
-                        </p>
-                    </div>
-                </div>
-                <a href="${game.downloadUrl || '#'}" class="btn btn-download" target="_blank">Download</a>
-            `;
+                    <a href="${game.downloadUrl || '#'}" class="btn btn-download" target="_blank">Download</a>
+                `;
 
+                gameContainer.appendChild(card);
+                observer.observe(card);
+            }
 
-            gameContainer.appendChild(card);
+            // If there are more games, schedule them to avoid blocking the main thread
+            if (endIndex < games.length) {
+                setTimeout(() => renderBatch(endIndex, 10), 50);
+            }
+        };
 
-            // Re-apply reveal animation
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.6s ease-out';
-            observer.observe(card);
-        });
+        renderBatch(0, initialBatch);
     };
 
     // Intersection Observer for animations
