@@ -772,6 +772,23 @@ footer {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
+
+    .bonus-tag,
+    .withdraw-tag {
+        font-size: 0.8rem;
+    }
+
+    .star-rating {
+        font-size: 0.75rem;
+    }
+
+    .star {
+        font-size: 0.85rem;
+    }
+
+    .rating-num {
+        font-size: 0.65rem;
+    }
 }
 
 .arrow {
