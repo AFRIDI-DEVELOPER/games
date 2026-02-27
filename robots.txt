@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://allyonogames.com/sitemap.xml
+Sitemap: https://allyonogames.store/sitemap.xml
