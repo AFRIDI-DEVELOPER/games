@@ -1,5 +1,21 @@
 const gamesData = [
     {
+        "name": "Rani Slots Official",
+        "iconUrl": "assets/images/games/all-yono-new.jpg",
+        "signUpBonus": "666",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://yonogamesrewards.com/?code=ZG58QCK8TU8&t=1771503411",
+        "rating": "5.0"
+    },
+    {
+        "name": "Yono New App",
+        "iconUrl": "assets/images/games/yono-777.png",
+        "signUpBonus": "581",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://referyono777.vip/?code=F9MWZUQ8S9A&t=1771503698",
+        "rating": "4.9"
+    },
+    {
         "name": "All Yono New Games",
         "iconUrl": "assets/images/games/all-yono-new.jpg",
         "signUpBonus": "1000",
