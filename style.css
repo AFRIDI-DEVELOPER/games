@@ -727,8 +727,6 @@ footer {
 
 @media (max-width: 768px) {
 
-
-
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -742,52 +740,194 @@ footer {
     }
 
     .game-card {
-        padding: 15px;
+        padding: 12px 10px;
+        gap: 8px;
+        border-radius: 14px;
+    }
+
+    .game-info {
+        gap: 10px;
     }
 
     .icon-wrapper {
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
     }
 
     .game-icon {
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
         border-radius: 10px;
     }
 
     .serial-no {
-        width: 18px;
-        height: 18px;
-        font-size: 0.8rem;
-        top: -0px;
-        left: -0px;
+        width: 16px;
+        height: 16px;
+        font-size: 0.45rem;
+    }
+
+    .game-card .game-details {
+        gap: 1px;
     }
 
     .game-details h3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 1px;
     }
 
     .btn-download {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        padding: 8px 14px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .bonus-tag,
     .withdraw-tag {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        gap: 2px;
     }
 
-    .star-rating {
+    .bonus-tag span,
+    .withdraw-tag span {
         font-size: 0.75rem;
     }
 
+    .tag-icon {
+        width: 13px;
+        height: 13px;
+        margin-right: 3px;
+    }
+
+    .star-rating {
+        font-size: 0.7rem;
+        gap: 1px;
+    }
+
     .star {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 
     .rating-num {
+        font-size: 0.6rem;
+        padding: 0px 3px;
+    }
+
+    .games-list {
+        padding: 40px 0;
+    }
+
+    .games-list h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .grid {
+        gap: 10px;
+    }
+
+    .bonus {
+        font-size: 1.2rem;
+    }
+
+    .bonus span {
+        font-size: 1.5rem;
+    }
+
+    .hero-content {
+        padding: 25px 15px;
+    }
+
+    .seo-content .content-box {
+        padding: 25px 15px;
+    }
+
+    .seo-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .seo-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .seo-content p {
+        font-size: 0.95rem;
+    }
+
+    .notice-box {
+        padding: 20px 15px;
+    }
+
+    .notice-content p {
+        font-size: 0.95rem;
+    }
+
+    .faq {
+        padding: 40px 0;
+    }
+
+    .faq-item {
+        padding: 18px;
+    }
+}
+
+/* Extra small phones (Oppo A5 and similar ~360px) */
+@media (max-width: 400px) {
+
+    .game-card {
+        padding: 10px 8px;
+    }
+
+    .game-info {
+        gap: 8px;
+    }
+
+    .icon-wrapper {
+        width: 44px;
+        height: 44px;
+    }
+
+    .game-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+    }
+
+    .game-details h3 {
+        font-size: 0.82rem;
+    }
+
+    .bonus-tag,
+    .withdraw-tag {
         font-size: 0.65rem;
+    }
+
+    .bonus-tag span,
+    .withdraw-tag span {
+        font-size: 0.7rem;
+    }
+
+    .tag-icon {
+        width: 11px;
+        height: 11px;
+        margin-right: 2px;
+    }
+
+    .btn-download {
+        padding: 7px 12px;
+        font-size: 0.72rem;
+    }
+
+    .star {
+        font-size: 0.65rem;
+    }
+
+    .rating-num {
+        font-size: 0.55rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
     }
 }
 
