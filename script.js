@@ -648,7 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </p>
                     </div>
                 </div>
-                <a href="${game.downloadUrl || '#'}" class="btn btn-download" target="_blank">Download</a>
+                <a href="${game.downloadUrl || '#'}" class="btn btn-download" target="_blank" rel="noopener noreferrer nofollow">Download</a>
             `;
 
             fragment.appendChild(card);
