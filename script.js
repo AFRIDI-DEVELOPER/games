@@ -629,7 +629,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="game-info">
                     <div class="icon-wrapper">
                         <div class="serial-no">${index + 1}</div>
-                        <img src="${game.iconUrl}" alt="${game.name}" class="game-icon">
+                        <img src="${game.iconUrl}" alt="${game.name}" class="game-icon" width="64" height="64" loading="lazy">
                     </div>
                     <div class="game-details">
                         <h3>${game.name}</h3>
@@ -741,36 +741,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // Repeat every 7 seconds
     setInterval(showEarningsPopup, 7000);
 
-    // Coin Spawning Logic - Targeted for Hero Box (Straight Fall Rain)
-    const initCoins = () => {
-        const coinCanvas = document.getElementById('coin-canvas');
-        if (!coinCanvas) return;
+    // Floating Particles Background - Premium Glow Effect
+    const initParticles = () => {
+        const canvas = document.getElementById('coin-canvas');
+        if (!canvas) return;
 
-        const coinCount = 55; // High frequency for rain effect
-        for (let i = 0; i < coinCount; i++) {
-            const coin = document.createElement('div');
-            coin.className = 'coin';
+        const glowTypes = ['glow-green', 'glow-emerald', 'glow-gold', 'glow-white'];
+        const particleCount = 12;
 
-            const startX = Math.random() * 100;
-            const size = 12 + Math.random() * 25;
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            const type = glowTypes[Math.floor(Math.random() * glowTypes.length)];
+            particle.className = `particle ${type}`;
 
-            // Simplified Physics
-            const fallDuration = 4 + Math.random() * 4; // Slower, steady fall
-            const fallDelay = Math.random() * 20;
-            const swayX = (Math.random() - 0.5) * 40;
+            const size = 20 + Math.random() * 70;
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            const duration = 6 + Math.random() * 8;
+            const delay = -(Math.random() * 10);
+            const driftX = (Math.random() - 0.5) * 60;
+            const driftY = (Math.random() - 0.5) * 60;
+            const startOpacity = 0.4 + Math.random() * 0.3;
+            const peakOpacity = 0.7 + Math.random() * 0.3;
 
-            coin.style.left = `${startX}%`;
-            coin.style.width = `${size}px`;
-            coin.style.height = `${size}px`;
-            coin.style.setProperty('--fall-duration', `${fallDuration}s`);
-            coin.style.setProperty('--fall-delay', `${-fallDelay}s`);
-            coin.style.setProperty('--sway-x', `${swayX}px`);
-            coin.style.opacity = 0.5 + Math.random() * 0.5;
+            particle.style.left = `${x}%`;
+            particle.style.top = `${y}%`;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.setProperty('--float-duration', `${duration}s`);
+            particle.style.setProperty('--float-delay', `${delay}s`);
+            particle.style.setProperty('--drift-x', `${driftX}px`);
+            particle.style.setProperty('--drift-y', `${driftY}px`);
+            particle.style.setProperty('--start-opacity', `${startOpacity}`);
+            particle.style.setProperty('--peak-opacity', `${peakOpacity}`);
 
-            coinCanvas.appendChild(coin);
+            canvas.appendChild(particle);
         }
     };
 
-    initCoins();
+    initParticles();
 
 });

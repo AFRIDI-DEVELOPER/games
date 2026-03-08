@@ -5,7 +5,7 @@
     --glass-bg: rgba(255, 255, 255, 0.7);
     --glass-border: rgba(255, 255, 255, 0.4);
     --text-primary: #1e293b;
-    --text-secondary: #64748b;
+    --text-secondary: #475569;
     --accent-color: #10b981;
     --success-color: #059669;
 }
@@ -22,7 +22,6 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
-    animation: fadeIn 1s ease-in;
 }
 
 .container {
@@ -33,13 +32,10 @@ body {
 
 /* Glassmorphism Effect */
 .glass {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.85);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-    /* Lighter shadow */
 }
 
 /* Header & Nav */
@@ -48,9 +44,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
@@ -241,6 +237,7 @@ nav {
     object-fit: cover;
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.472);
+    aspect-ratio: 1 / 1;
 }
 
 .game-card .game-details {
@@ -393,7 +390,7 @@ nav {
 }
 
 .withdraw-tag {
-    color: var(--text-secondary);
+    color: #334155;
     font-size: 0.9rem;
 }
 
@@ -431,7 +428,7 @@ nav {
 }
 
 .faq-item p {
-    color: var(--text-secondary);
+    color: #334155;
 }
 
 /* Footer */
@@ -553,7 +550,7 @@ footer a:hover {
 }
 
 
-/* Animated Coins Background */
+/* Animated Particles Background */
 #coin-canvas {
     position: absolute;
     top: 0;
@@ -574,105 +571,61 @@ footer a:hover {
     z-index: 2;
 }
 
-.coin {
+.particle {
     position: absolute;
-    width: 35px;
-    height: 35px;
-    background: radial-gradient(circle at 30% 30%, #fff7ad 0%, #ffd700 30%, #b8860b 80%, #5d4037 100%);
     border-radius: 50%;
-    box-shadow:
-        inset 0 0 0 2px rgba(255, 255, 255, 0.5),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.5),
-        0 5px 15px rgba(0, 0, 0, 0.3);
-    transform-style: preserve-3d;
-    will-change: transform;
-    animation: coinFall var(--fall-duration, 4s) ease-in infinite;
-    animation-delay: var(--fall-delay, 0s);
-    contain: layout style;
-    border: 1px solid #ffd700;
+    will-change: transform, opacity;
+    animation: particleFloat var(--float-duration, 8s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+    contain: layout style paint;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
-
-.coin::before {
-    content: '$';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(184, 134, 11, 0.8);
-    font-weight: 900;
-    font-size: 0.8em;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+.particle.glow-green {
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.9) 0%, rgba(16, 185, 129, 0.4) 40%, rgba(16, 185, 129, 0.1) 70%, transparent 100%);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.6), 0 0 50px rgba(16, 185, 129, 0.3), 0 0 80px rgba(16, 185, 129, 0.1);
 }
 
-.coin::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg,
-            transparent 0%,
-            rgba(255, 255, 255, 0) 40%,
-            rgba(255, 255, 255, 0.8) 50%,
-            rgba(255, 255, 255, 0) 60%,
-            transparent 100%);
-    border-radius: 50%;
-    animation: coinShine 4s infinite linear;
-    background-size: 200% 200%;
+.particle.glow-emerald {
+    background: radial-gradient(circle, rgba(52, 211, 153, 0.85) 0%, rgba(52, 211, 153, 0.35) 40%, rgba(52, 211, 153, 0.08) 70%, transparent 100%);
+    box-shadow: 0 0 18px rgba(52, 211, 153, 0.5), 0 0 45px rgba(52, 211, 153, 0.25), 0 0 70px rgba(52, 211, 153, 0.1);
 }
 
-@keyframes coinFall {
+.particle.glow-gold {
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.85) 0%, rgba(251, 191, 36, 0.35) 40%, rgba(251, 191, 36, 0.08) 70%, transparent 100%);
+    box-shadow: 0 0 18px rgba(251, 191, 36, 0.5), 0 0 45px rgba(251, 191, 36, 0.2), 0 0 70px rgba(251, 191, 36, 0.08);
+}
+
+.particle.glow-white {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.05) 70%, transparent 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.15);
+}
+
+@keyframes particleFloat {
     0% {
-        top: -10%;
-        transform: translateX(var(--sway-x, 0)) rotateX(0deg) rotateY(0deg);
-        opacity: 0;
+        transform: translate(0, 0) scale(1);
+        opacity: var(--start-opacity, 0.4);
     }
 
-    10% {
-        opacity: 1;
+    25% {
+        transform: translate(var(--drift-x, 20px), var(--drift-y, -30px)) scale(1.15);
+        opacity: var(--peak-opacity, 0.7);
     }
 
-    90% {
-        opacity: 1;
+    50% {
+        transform: translate(calc(var(--drift-x, 20px) * -0.5), calc(var(--drift-y, -30px) * 0.8)) scale(0.9);
+        opacity: var(--start-opacity, 0.4);
+    }
+
+    75% {
+        transform: translate(calc(var(--drift-x, 20px) * 0.7), calc(var(--drift-y, -30px) * -0.6)) scale(1.1);
+        opacity: var(--peak-opacity, 0.7);
     }
 
     100% {
-        top: 110%;
-        transform: translateX(calc(var(--sway-x, 0) * 1.5)) rotateX(360deg) rotateY(720deg);
-        opacity: 0;
-    }
-}
-
-@keyframes coinSpin {
-    0% {
-        transform: rotateY(0deg);
-    }
-
-    100% {
-        transform: rotateY(360deg);
-    }
-}
-
-@keyframes coinShine {
-    0% {
-        background-position: -200% -200%;
-    }
-
-    100% {
-        background-position: 200% 200%;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        opacity: var(--start-opacity, 0.4);
     }
 }
 
@@ -742,7 +695,6 @@ footer a:hover {
     /* Below navbar */
     right: 20px;
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
     padding: 15px 25px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -780,7 +732,7 @@ footer a:hover {
 
 .notif-text {
     font-size: 0.85rem;
-    color: #64748b;
+    color: #475569;
     line-height: 1.4;
 }
 
@@ -1032,7 +984,7 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: rgba(5, 5, 5, 0.303);
+    color: rgba(5, 5, 5, 0.5);
     margin-top: 20px;
     font-weight: 700;
 
