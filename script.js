@@ -682,24 +682,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // Add scroll effect to header (throttled with rAF to avoid forced reflow)
-    const header = document.querySelector('header');
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                if (window.scrollY > 50) {
-                    header.style.opacity = '0.98';
-                    header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
-                } else {
-                    header.style.opacity = '1';
-                    header.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
-                }
-                ticking = false;
-            });
-            ticking = true;
-        }
-    }, { passive: true });
 
     // Earnings Popup Logic
     const indianNames = [
@@ -748,45 +730,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Repeat every 7 seconds
     setInterval(showEarningsPopup, 7000);
-
-    // Floating Gold Coins Background
-    const initCoins = () => {
-        const canvas = document.getElementById('coin-canvas');
-        if (!canvas) return;
-
-        const coinCount = 5;
-        const sizeClasses = ['coin-sm', 'coin-md', 'coin-lg'];
-
-        for (let i = 0; i < coinCount; i++) {
-            const coin = document.createElement('div');
-
-            const sizeIdx = Math.floor(Math.random() * 3);
-            const sizeClass = sizeClasses[sizeIdx];
-            let size;
-            if (sizeIdx === 0) size = 16 + Math.random() * 6;
-            else if (sizeIdx === 1) size = 26 + Math.random() * 8;
-            else size = 36 + Math.random() * 10;
-
-            coin.className = `gold-coin ${sizeClass}`;
-
-            const x = Math.random() * 95;
-            const duration = 5 + Math.random() * 7;
-            const delay = -(Math.random() * 12);
-            const opacity = 0.6 + Math.random() * 0.35;
-            const spinDeg = (Math.random() > 0.5 ? 1 : -1) * (180 + Math.random() * 360);
-
-            coin.style.left = `${x}%`;
-            coin.style.width = `${size}px`;
-            coin.style.height = `${size}px`;
-            coin.style.setProperty('--fall-duration', `${duration}s`);
-            coin.style.setProperty('--fall-delay', `${delay}s`);
-            coin.style.setProperty('--coin-opacity', `${opacity}`);
-            coin.style.setProperty('--spin-deg', `${spinDeg}deg`);
-
-            canvas.appendChild(coin);
-        }
-    };
-
-    initCoins();
 
 });
