@@ -147,7 +147,7 @@ nav {
 
 .badge {
     font-size: 0.8rem;
-    background: var(--accent-color);
+    background: #047857;
     color: white;
     padding: 5px 12px;
     border-radius: 50px;
@@ -216,7 +216,7 @@ nav {
     position: absolute;
     top: -0px;
     left: -0px;
-    background: #ff5252;
+    background: #c62828;
     color: white;
     width: 18px;
     height: 18px;
@@ -225,7 +225,7 @@ nav {
     align-items: center;
     justify-content: center;
     font-size: .5rem;
-    font-weight: 500;
+    font-weight: 700;
     z-index: 10;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -324,11 +324,11 @@ nav {
 }
 
 .bonus-tag span {
-    color: #ef4444;
+    color: #c62828;
 }
 
 .withdraw-tag span {
-    color: #10b981;
+    color: #047857;
 }
 
 /* Games Grid */
@@ -521,7 +521,7 @@ footer {
 }
 
 footer a {
-    color: var(--accent-color);
+    color: #047857;
     text-decoration: none;
     font-weight: 600;
 }
@@ -532,14 +532,14 @@ footer a:hover {
 
 /* SEO Internal Links */
 .seo-content a {
-    color: #10b981;
+    color: #047857;
     text-decoration: none;
-    border-bottom: 1px dashed #10b981;
+    border-bottom: 1px dashed #047857;
     transition: all 0.3s ease;
 }
 
 .seo-content a:hover {
-    color: #059669;
+    color: #065f46;
     border-bottom-style: solid;
 }
 
@@ -571,61 +571,105 @@ footer a:hover {
     z-index: 2;
 }
 
-.particle {
+/* 3D Gold Coin Styles */
+.gold-coin {
     position: absolute;
     border-radius: 50%;
     will-change: transform, opacity;
-    animation: particleFloat var(--float-duration, 8s) ease-in-out infinite;
-    animation-delay: var(--float-delay, 0s);
-    contain: layout style paint;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    animation: coinFall var(--fall-duration, 6s) linear infinite;
+    animation-delay: var(--fall-delay, 0s);
+    /* Light, bright metallic gold surface */
+    background:
+        radial-gradient(ellipse 55% 45% at 38% 28%, rgba(255, 255, 255, 0.85) 0%, transparent 55%),
+        radial-gradient(ellipse 85% 85% at 50% 50%, #fff7c2 0%, #ffe566 18%, #ffd000 40%, #f0b400 65%, #d4981a 90%);
+    /* Smooth natural rim - no harsh borders */
+    border: none;
+    box-shadow:
+        inset 0 0 0 2px rgba(210, 165, 40, 0.5),
+        inset 0 0 0 3.5px rgba(255, 230, 120, 0.25),
+        inset 0 -3px 5px rgba(180, 120, 20, 0.25),
+        inset 0 3px 5px rgba(255, 250, 210, 0.6),
+        0 1px 2px rgba(160, 110, 20, 0.25),
+        0 0 10px rgba(255, 215, 60, 0.25);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 800px;
 }
 
-.particle.glow-green {
-    background: radial-gradient(circle, rgba(16, 185, 129, 0.9) 0%, rgba(16, 185, 129, 0.4) 40%, rgba(16, 185, 129, 0.1) 70%, transparent 100%);
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.6), 0 0 50px rgba(16, 185, 129, 0.3), 0 0 80px rgba(16, 185, 129, 0.1);
+/* Bright specular shine */
+.gold-coin::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 55%;
+    height: 38%;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 245, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
-.particle.glow-emerald {
-    background: radial-gradient(circle, rgba(52, 211, 153, 0.85) 0%, rgba(52, 211, 153, 0.35) 40%, rgba(52, 211, 153, 0.08) 70%, transparent 100%);
-    box-shadow: 0 0 18px rgba(52, 211, 153, 0.5), 0 0 45px rgba(52, 211, 153, 0.25), 0 0 70px rgba(52, 211, 153, 0.1);
+/* Embossed ₹ symbol */
+.gold-coin::after {
+    content: '₹';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-family: 'Arial', sans-serif;
+    color: rgba(180, 120, 10, 0.3);
+    text-shadow:
+        0 1px 0 rgba(255, 250, 200, 0.6),
+        0 -1px 0 rgba(160, 100, 0, 0.15);
+    pointer-events: none;
+    line-height: 1;
 }
 
-.particle.glow-gold {
-    background: radial-gradient(circle, rgba(251, 191, 36, 0.85) 0%, rgba(251, 191, 36, 0.35) 40%, rgba(251, 191, 36, 0.08) 70%, transparent 100%);
-    box-shadow: 0 0 18px rgba(251, 191, 36, 0.5), 0 0 45px rgba(251, 191, 36, 0.2), 0 0 70px rgba(251, 191, 36, 0.08);
+/* Subtle inner ring for coin detail */
+.gold-coin.coin-md,
+.gold-coin.coin-lg {
+    outline: 1px solid rgba(200, 160, 40, 0.2);
+    outline-offset: -4px;
 }
 
-.particle.glow-white {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.05) 70%, transparent 100%);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.15);
+/* Size variants */
+.gold-coin.coin-sm::after {
+    font-size: 10px;
 }
 
-@keyframes particleFloat {
+.gold-coin.coin-md::after {
+    font-size: 14px;
+}
+
+.gold-coin.coin-lg::after {
+    font-size: 19px;
+}
+
+.gold-coin.coin-lg {
+    outline-offset: -5px;
+}
+
+@keyframes coinFall {
     0% {
-        transform: translate(0, 0) scale(1);
-        opacity: var(--start-opacity, 0.4);
+        transform: translateY(-60px) rotate(0deg) rotateX(0deg) scale(var(--coin-scale, 1));
+        opacity: 0;
     }
 
-    25% {
-        transform: translate(var(--drift-x, 20px), var(--drift-y, -30px)) scale(1.15);
-        opacity: var(--peak-opacity, 0.7);
+    6% {
+        opacity: var(--coin-opacity, 0.9);
     }
 
-    50% {
-        transform: translate(calc(var(--drift-x, 20px) * -0.5), calc(var(--drift-y, -30px) * 0.8)) scale(0.9);
-        opacity: var(--start-opacity, 0.4);
-    }
-
-    75% {
-        transform: translate(calc(var(--drift-x, 20px) * 0.7), calc(var(--drift-y, -30px) * -0.6)) scale(1.1);
-        opacity: var(--peak-opacity, 0.7);
+    88% {
+        opacity: var(--coin-opacity, 0.9);
     }
 
     100% {
-        transform: translate(0, 0) scale(1);
-        opacity: var(--start-opacity, 0.4);
+        transform: translateY(calc(100vh + 60px)) rotate(var(--spin-deg, 360deg)) rotateX(var(--flip-deg, 180deg)) scale(var(--coin-scale, 1));
+        opacity: 0;
     }
 }
 
@@ -671,7 +715,7 @@ footer a:hover {
 }
 
 .notice-content a {
-    color: #ef4444;
+    color: #b91c1c;
     text-decoration: none;
     font-weight: 600;
 }
@@ -682,8 +726,8 @@ footer a:hover {
 }
 
 .notice-footer p {
-    color: #10b981;
-    /* Green text from image */
+    color: #047857;
+    /* Darker green for accessibility */
     font-weight: 600;
     font-size: 1.2rem;
 }
@@ -770,7 +814,7 @@ footer a:hover {
 }
 
 .seo-content strong {
-    color: #10b981;
+    color: #047857;
 }
 
 @media (max-width: 768px) {
@@ -984,8 +1028,7 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: rgba(5, 5, 5, 0.5);
+    color: rgba(5, 5, 5, 0.65);
     margin-top: 20px;
     font-weight: 700;
-
 }
