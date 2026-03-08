@@ -1,3 +1,8 @@
+/* Upgrade to Poppins once it loads */
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
+}
+
 .glass {
     background: rgba(255, 255, 255, 0.85);
     border: 1px solid var(--glass-border);
