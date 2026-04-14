@@ -1,36 +1,5 @@
 const gamesData = [
-    {
-        "name": "Rani Slots Official",
-        "iconUrl": "assets/images/games/all-yono-new.webp",
-        "signUpBonus": "666",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://yonogamesrewards.com/?code=ZG58QCK8TU8&t=1771503411",
-        "rating": "5.0"
-    },
-    {
-        "name": "Yono New App",
-        "iconUrl": "assets/images/games/yono-777.webp",
-        "signUpBonus": "581",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://referyono777.vip/?code=F9MWZUQ8S9A&t=1771503698",
-        "rating": "4.9"
-    },
-    {
-        "name": "All Yono New Games",
-        "iconUrl": "assets/images/games/all-yono-new.webp",
-        "signUpBonus": "1000",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/all-yono-new",
-        "rating": "4.8"
-    },
-    {
-        "name": "OK Rummy",
-        "iconUrl": "assets/images/games/ok-rummy.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://www.okrummy35.com/?code=H2GDGY55B6Q&t=1770831438",
-        "rating": "4.5"
-    },
+    // ===== DONE - Active Games (Top) =====
     {
         "name": "Club INR",
         "iconUrl": "assets/images/games/club-inr.webp",
@@ -56,14 +25,6 @@ const gamesData = [
         "rating": "4.4"
     },
     {
-        "name": "IND Club",
-        "iconUrl": "assets/images/games/ind-club.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://www.indcluba.com/?code=34UH7CLMWQT&t=1770702825",
-        "rating": "4.7"
-    },
-    {
         "name": "Rummy 888",
         "iconUrl": "assets/images/games/rummy-888.webp",
         "signUpBonus": "550",
@@ -78,22 +39,6 @@ const gamesData = [
         "minWithdrawal": "100",
         "downloadUrl": "https://referyono777.vip/?code=F9MWZUQ8S9A&t=1771503698",//done
         "rating": "4.9"
-    },
-    {
-        "name": "Rummy 91",
-        "iconUrl": "assets/images/games/rummy-91.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/rummy-91",
-        "rating": "4.4"
-    },
-    {
-        "name": "Inr Rummy",
-        "iconUrl": "assets/images/games/inr-rummy.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://inrrummy1.one/?code=JMQPMQZ2EAN&t=1770832672",
-        "rating": "4.6"
     },
     {
         "name": "Ever 777",
@@ -120,38 +65,6 @@ const gamesData = [
         "rating": "4.7"
     },
     {
-        "name": "Teenpatti Master",
-        "iconUrl": "assets/images/games/teenpatti-master.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://www.earntp.com/m/s4uk0m",
-        "rating": "4.8"
-    },
-    {
-        "name": "Teenpatti Gold",
-        "iconUrl": "assets/images/games/teenpatti-gold.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/teenpatti-gold",
-        "rating": "4.6"
-    },
-    {
-        "name": "Rummy A1",
-        "iconUrl": "assets/images/games/rummy-a1.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/rummy-a1",
-        "rating": "4.9"
-    },
-    {
-        "name": "Super Slots",
-        "iconUrl": "assets/images/games/super-slots.webp",
-        "signUpBonus": "55",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/super-slots",
-        "rating": "4.4"
-    },
-    {
         "name": "777 Game",
         "iconUrl": "assets/images/games/777-game.webp",
         "signUpBonus": "550",
@@ -174,22 +87,6 @@ const gamesData = [
         "minWithdrawal": "100",
         "downloadUrl": " https://www.hindi777agent.org/?code=ETCYH877DZA&t=1771495980",//done
         "rating": "4.6"
-    },
-    {
-        "name": "Jaiho Win",
-        "iconUrl": "assets/images/games/jaiho-win.webp",
-        "signUpBonus": "55",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/jaiho-win",
-        "rating": "4.4"
-    },
-    {
-        "name": "MQM BET",
-        "iconUrl": "assets/images/games/mqm-bet.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/mqm-bet",
-        "rating": "4.7"
     },
     {
         "name": "Jaiho Slots",
@@ -224,14 +121,6 @@ const gamesData = [
         "rating": "4.6"
     },
     {
-        "name": "Yono Slots",
-        "iconUrl": "assets/images/games/yono-slots.webp",
-        "signUpBonus": "555",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/yono-slots",
-        "rating": "4.5"
-    },
-    {
         "name": "Boss Rummy",
         "iconUrl": "assets/images/games/boss-rummy.webp",
         "signUpBonus": "55",
@@ -264,52 +153,12 @@ const gamesData = [
         "rating": "4.3"
     },
     {
-        "name": "YN 777",
-        "iconUrl": "assets/images/games/yn-777.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://www.y754.com/?code=4SWLD6MZK7W&t=1770833309",
-        "rating": "4.6"
-    },
-    {
-        "name": "Slots Spin",
-        "iconUrl": "assets/images/games/slots-spin.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/slots-spin",
-        "rating": "4.4"
-    },
-    {
-        "name": "Yono All Games",
-        "iconUrl": "assets/images/games/yono-all-games.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/yono-all-games",
-        "rating": "4.8"
-    },
-    {
-        "name": "All Yono Games",
-        "iconUrl": "assets/images/games/all-yono-games-list.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/all-yono-games",
-        "rating": "4.9"
-    },
-    {
         "name": "Bingo 101",
         "iconUrl": "assets/images/games/bingo-101.webp",
         "signUpBonus": "550",
         "minWithdrawal": "100",
         "downloadUrl": " https://bingo101i.com/?code=UJEQRWTNWLU&t=1771494784",//done
         "rating": "4.5"
-    },
-    {
-        "name": "Jaiho Arcade",
-        "iconUrl": "assets/images/games/jaiho-spin.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://www.jaihoarcade34.com/?code=AZDQJWXR3TM&t=1771491937",
-        "rating": "4.6"
     },
     {
         "name": "Yono Vip",
@@ -336,14 +185,6 @@ const gamesData = [
         "rating": "4.5"
     },
     {
-        "name": "MKM Bet",
-        "iconUrl": "assets/images/games/mqm-bet.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/mkm-bet",
-        "rating": "4.3"
-    },
-    {
         "name": "IND Slots",
         "iconUrl": "assets/images/games/ind-club.webp",
         "signUpBonus": "550",
@@ -360,28 +201,12 @@ const gamesData = [
         "rating": "4.8"
     },
     {
-        "name": "Spin Lucky",
-        "iconUrl": "assets/images/games/spin-winner.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/spin-lucky",
-        "rating": "4.4"
-    },
-    {
         "name": "Spin Gold",
         "iconUrl": "assets/images/games/spin-crush.webp",
         "signUpBonus": "550",
         "minWithdrawal": "100",
         "downloadUrl": "https://spingoldagents.net/?code=HLTYHM4R2LA&t=1771502714",//done
         "rating": "4.5"
-    },
-    {
-        "name": "MDM Bet",
-        "iconUrl": "assets/images/games/mqm-bet.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/mdm-bet",
-        "rating": "4.7"
     },
     {
         "name": "789 Jackpots",
@@ -392,28 +217,12 @@ const gamesData = [
         "rating": "4.6"
     },
     {
-        "name": "EN 365",
-        "iconUrl": "assets/images/games/en-365.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/en-365",
-        "rating": "4.3"
-    },
-    {
         "name": "IND Rummy",
         "iconUrl": "assets/images/games/ind-club.webp",
         "signUpBonus": "550",
         "minWithdrawal": "100",
         "downloadUrl": " indrummy2.com/?code=2BASFHZDPBC&t=1771500022",//done
         "rating": "4.5"
-    },
-    {
-        "name": "My 777",
-        "iconUrl": "assets/images/games/yono-777.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/my-777",
-        "rating": "4.4"
     },
     {
         "name": "Gogo Rummy",
@@ -432,28 +241,12 @@ const gamesData = [
         "rating": "4.5"
     },
     {
-        "name": "Rummy 365",
-        "iconUrl": "assets/images/games/rummy-77.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/rummy-365",
-        "rating": "4.6"
-    },
-    {
         "name": "Spin 101",
         "iconUrl": "assets/images/games/spin-winner.webp",
         "signUpBonus": "550",
         "minWithdrawal": "100",
         "downloadUrl": " https://spin101-a.net/?code=P4CGXRD5CWJ&t=1771502940",//done
         "rating": "4.3"
-    },
-    {
-        "name": "Bet 213 Slots",
-        "iconUrl": "assets/images/games/bet-213-slots.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/bet-213-slots",
-        "rating": "4.8"
     },
     {
         "name": "MBM Bet",
@@ -488,14 +281,6 @@ const gamesData = [
         "rating": "4.5"
     },
     {
-        "name": "ABC Rummy",
-        "iconUrl": "assets/images/games/abc-rummy.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/abc-rummy",
-        "rating": "4.6"
-    },
-    {
         "name": "Neta Vip",
         "iconUrl": "assets/images/games/ever-777.webp",
         "signUpBonus": "550",
@@ -518,14 +303,6 @@ const gamesData = [
         "minWithdrawal": "100",
         "downloadUrl": " https://www.joyrummy12.com/?code=SXX3GQSN6T1&t=1771500812",//done
         "rating": "4.8"
-    },
-    {
-        "name": "Hi Rummy",
-        "iconUrl": "assets/images/games/rummy-91.webp",
-        "signUpBonus": "550",
-        "minWithdrawal": "100",
-        "downloadUrl": "https://allyononewgames.com/download/hi-rummy",
-        "rating": "4.4"
     },
     {
         "name": "Maha Games",
@@ -558,6 +335,232 @@ const gamesData = [
         "minWithdrawal": "100",
         "downloadUrl": " https://www.toprummy.cc/?code=7K98GLJ79UH&t=1771503223",//done
         "rating": "4.3"
+    },
+
+    // ===== NOT DONE - Remaining Games (Bottom) =====
+    {
+        "name": "Rani Slots Official",
+        "iconUrl": "assets/images/games/all-yono-new.webp",
+        "signUpBonus": "666",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://yonogamesrewards.com/?code=ZG58QCK8TU8&t=1771503411",
+        "rating": "5.0"
+    },
+    {
+        "name": "Yono New App",
+        "iconUrl": "assets/images/games/yono-777.webp",
+        "signUpBonus": "581",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://referyono777.vip/?code=F9MWZUQ8S9A&t=1771503698",
+        "rating": "4.9"
+    },
+    {
+        "name": "All Yono New Games",
+        "iconUrl": "assets/images/games/all-yono-new.webp",
+        "signUpBonus": "1000",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/all-yono-new",
+        "rating": "4.8"
+    },
+    {
+        "name": "OK Rummy",
+        "iconUrl": "assets/images/games/ok-rummy.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://www.okrummy35.com/?code=H2GDGY55B6Q&t=1770831438",
+        "rating": "4.5"
+    },
+    {
+        "name": "IND Club",
+        "iconUrl": "assets/images/games/ind-club.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://www.indcluba.com/?code=34UH7CLMWQT&t=1770702825",
+        "rating": "4.7"
+    },
+    {
+        "name": "Rummy 91",
+        "iconUrl": "assets/images/games/rummy-91.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/rummy-91",
+        "rating": "4.4"
+    },
+    {
+        "name": "Inr Rummy",
+        "iconUrl": "assets/images/games/inr-rummy.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://inrrummy1.one/?code=JMQPMQZ2EAN&t=1770832672",
+        "rating": "4.6"
+    },
+    {
+        "name": "Teenpatti Master",
+        "iconUrl": "assets/images/games/teenpatti-master.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://www.earntp.com/m/s4uk0m",
+        "rating": "4.8"
+    },
+    {
+        "name": "Teenpatti Gold",
+        "iconUrl": "assets/images/games/teenpatti-gold.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/teenpatti-gold",
+        "rating": "4.6"
+    },
+    {
+        "name": "Rummy A1",
+        "iconUrl": "assets/images/games/rummy-a1.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/rummy-a1",
+        "rating": "4.9"
+    },
+    {
+        "name": "Super Slots",
+        "iconUrl": "assets/images/games/super-slots.webp",
+        "signUpBonus": "55",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/super-slots",
+        "rating": "4.4"
+    },
+    {
+        "name": "Jaiho Win",
+        "iconUrl": "assets/images/games/jaiho-win.webp",
+        "signUpBonus": "55",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/jaiho-win",
+        "rating": "4.4"
+    },
+    {
+        "name": "MQM BET",
+        "iconUrl": "assets/images/games/mqm-bet.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/mqm-bet",
+        "rating": "4.7"
+    },
+    {
+        "name": "Yono Slots",
+        "iconUrl": "assets/images/games/yono-slots.webp",
+        "signUpBonus": "555",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/yono-slots",
+        "rating": "4.5"
+    },
+    {
+        "name": "YN 777",
+        "iconUrl": "assets/images/games/yn-777.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://www.y754.com/?code=4SWLD6MZK7W&t=1770833309",
+        "rating": "4.6"
+    },
+    {
+        "name": "Slots Spin",
+        "iconUrl": "assets/images/games/slots-spin.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/slots-spin",
+        "rating": "4.4"
+    },
+    {
+        "name": "Yono All Games",
+        "iconUrl": "assets/images/games/yono-all-games.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/yono-all-games",
+        "rating": "4.8"
+    },
+    {
+        "name": "All Yono Games",
+        "iconUrl": "assets/images/games/all-yono-games-list.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/all-yono-games",
+        "rating": "4.9"
+    },
+    {
+        "name": "Jaiho Arcade",
+        "iconUrl": "assets/images/games/jaiho-spin.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://www.jaihoarcade34.com/?code=AZDQJWXR3TM&t=1771491937",
+        "rating": "4.6"
+    },
+    {
+        "name": "MKM Bet",
+        "iconUrl": "assets/images/games/mqm-bet.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/mkm-bet",
+        "rating": "4.3"
+    },
+    {
+        "name": "Spin Lucky",
+        "iconUrl": "assets/images/games/spin-winner.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/spin-lucky",
+        "rating": "4.4"
+    },
+    {
+        "name": "MDM Bet",
+        "iconUrl": "assets/images/games/mqm-bet.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/mdm-bet",
+        "rating": "4.7"
+    },
+    {
+        "name": "EN 365",
+        "iconUrl": "assets/images/games/en-365.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/en-365",
+        "rating": "4.3"
+    },
+    {
+        "name": "My 777",
+        "iconUrl": "assets/images/games/yono-777.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/my-777",
+        "rating": "4.4"
+    },
+    {
+        "name": "Rummy 365",
+        "iconUrl": "assets/images/games/rummy-77.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/rummy-365",
+        "rating": "4.6"
+    },
+    {
+        "name": "Bet 213 Slots",
+        "iconUrl": "assets/images/games/bet-213-slots.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/bet-213-slots",
+        "rating": "4.8"
+    },
+    {
+        "name": "ABC Rummy",
+        "iconUrl": "assets/images/games/abc-rummy.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/abc-rummy",
+        "rating": "4.6"
+    },
+    {
+        "name": "Hi Rummy",
+        "iconUrl": "assets/images/games/rummy-91.webp",
+        "signUpBonus": "550",
+        "minWithdrawal": "100",
+        "downloadUrl": "https://allyononewgames.com/download/hi-rummy",
+        "rating": "4.4"
     },
     {
         "name": "SVIP 777",
