@@ -38,7 +38,8 @@ const gamesData = [
         "signUpBonus": "550",
         "minWithdrawal": "100",
         "downloadUrl": "https://referyono777.vip/?code=F9MWZUQ8S9A&t=1771503698",//done
-        "rating": "4.9"
+        "rating": "4.9",
+        "desc": "The most popular yono 777 game with the highest winning rate and instant withdrawals."
     },
     {
         "name": "Ever 777",
@@ -262,7 +263,8 @@ const gamesData = [
         "signUpBonus": "550",
         "minWithdrawal": "100",
         "downloadUrl": " https://yonorummy009.com/?code=MPX8V3RGSP5&t=1771503466",//done
-        "rating": "4.7"
+        "rating": "4.7",
+        "desc": "Official yono rummy app providing the best rummy experience in India."
     },
     {
         "name": "Yono Games",
@@ -270,7 +272,8 @@ const gamesData = [
         "signUpBonus": "550",
         "minWithdrawal": "100",
         "downloadUrl": " https://yonogamesrewards.com/?code=ZG58QCK8TU8&t=1771503411",//done
-        "rating": "4.9"
+        "rating": "4.9",
+        "desc": "All yono games collection with over 100+ titles and amazing rewards."
     },
     {
         "name": "Jaiho Rummy",
@@ -344,7 +347,8 @@ const gamesData = [
         "signUpBonus": "666",
         "minWithdrawal": "100",
         "downloadUrl": "https://yonogamesrewards.com/?code=ZG58QCK8TU8&t=1771503411",
-        "rating": "5.0"
+        "rating": "5.0",
+        "desc": "Download Rani Slots official game, the top choice for yono game enthusiasts in 2026."
     },
     {
         "name": "Yono New App",
@@ -643,6 +647,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </svg>
                             Sign Up Bonus: <span>₹${game.signUpBonus}</span>
                         </p>
+                        ${game.desc ? `<p class="game-desc" style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">${game.desc}</p>` : ''}
                         <p class="withdraw-tag">
                             <svg class="tag-icon withdraw-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
