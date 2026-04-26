@@ -1,3 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /assets/
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
 Sitemap: https://allyonogames.store/sitemap.xml
+
+Host: allyonogames.store
